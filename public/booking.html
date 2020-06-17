@@ -85,26 +85,26 @@
 							<div class="col-md-6">
 								<div class="form-group" >
 									<label for="name">Name:</label>
-									<input class="input" type="text" placeholder="Name" name="name">
+									<input class="input" required type="text" placeholder="Name" name="name">
 								</div>
 								<div class="form-group">
 									<label for="phone">Phone:</label>
-									<input class="input" type="tel" placeholder="Phone" name="phone">
+									<input class="input" pattern="[0-9]{10}" type="tel" placeholder="Phone" name="phone">
 								</div>
 								<div class="form-group">
 									<label for="date">Date:</label>
-									<input class="input" type="text" placeholder="MM/DD/YYYY" name="date">
+									<input class="input" required type="text" placeholder="MM/DD/YYYY" name="date">
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="email">Email:</label>
-									<input class="input" type="email" placeholder="Email" name="email">
+									<input class="input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" placeholder="Email" name="email">
 								</div>
 								<div class="form-group">
 									<label for="number">Number of Guests:</label>
-									<select class="input" name="number">
+									<select class="input" name="number" required>
 										<option>1 Person</option>
 										<option>2 People</option>
 										<option>3 People</option>
@@ -116,7 +116,7 @@
 								</div>
 								<div class="form-group">
 								  <label for="time">Time:</label>
-								  <input class="input" type="text" placeholder="HH:MM" name="time">
+								  <input class="input" type="text" placeholder="HH:MM" name="time" required>
 								</div>
 							</div>
 

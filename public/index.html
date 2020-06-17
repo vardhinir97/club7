@@ -396,7 +396,7 @@
     <h6 class="linef">Please give your valuable feedback</h6>
     <input type="text" placeholder="Enter your Name" name="name" required class="linei">
       
-    <textarea placeholder="Enter your Message" name="feedback"></textarea>
+    <textarea placeholder="Enter your Message" name="feedback" required></textarea>
 
     <hr>
     <h6 class="linef">Thank you for having our services, for more <a href="./menu.html">Click here</a>.</h6>
@@ -531,9 +531,9 @@ anniversary party, candle light dinners etc.,</p>
                                     <label for="name" class="linef"><b>Name</b></label>
                                     <input type="text" placeholder="Enter your Name" name="name" required class="linei">
                                     <label for="phno" class="linef"><b>Mobile Number</b></label>
-                                    <input type="text" placeholder="Enter your Mobile Number" name="phno" required class="linei">
+                                    <input type="text" placeholder="Enter your Mobile Number" pattern="[0-9]{10}" name="phno" required class="linei">
                                     <label for="ques" class="linef"><b>Your question ?</b></label>
-                                    <textarea placeholder="Start typing..!!" name="question"></textarea>
+                                    <textarea placeholder="Start typing..!!" name="question" required></textarea>
                                     <button type="submit" class="registerbtn">Post</button>
                                 </div>                                 
                           </form>   

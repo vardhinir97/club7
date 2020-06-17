@@ -8,7 +8,43 @@
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="plugins/signup/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  opacity:0.7;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
     <!-- Main css -->
     <link rel="stylesheet" href="plugins/signup/css/style.css">
 </head>
@@ -23,20 +59,24 @@
                     <form action="/signup" method="post"  class="signup-form">
                         <h1 class="form-title">Create account</h1>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+                            <input type="text" class="form-input" name="name" id="name" required placeholder="Your Name"/>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                            <input type="email" class="form-input" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Your Email"/>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-input" name="phone" id="phone" placeholder="Your Phone"/>
+                            <input type="tel" class="form-input" name="phone" pattern="[0-9]{10}" id="phone" placeholder="Your Phone"/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <input type="password" class="form-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" id="password" placeholder="Password"/>
                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                         </div>
+                        <div class="tooltip">Password should be like
+                            <span class="tooltiptext">Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters</span>
+                        </div>
+                        <br><br>
                         <div class="form-group">
-                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
                              <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
